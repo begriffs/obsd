@@ -1,0 +1,31 @@
+## ACCOUNTS #########################
+
+IMAPAccount fastmail
+Host mail.messagingengine.com
+Port 992
+User foobar
+Pass bazbat
+# PassCmd "gpg2 --no-tty -q -d ~/.imap-password.gpg"
+SSLType IMAPS
+SSLVersions TLSv1.2
+
+## STORES ###########################
+
+MaildirStore begriffs_local
+Path ~/var/mail/begriffs/
+Inbox ~/var/mail/begriffs/INBOX
+MaxSize 0
+
+IMAPStore begriffs_fastmail
+Account fastmail
+
+## CHANNELS #########################
+
+Channel begriffs
+Master :begriffs_fastmail:
+Slave :begriffs_local:
+Patterns * !Trash
+MaxSize 0
+Create Slave
+Remove Slave
+Expunge Slave

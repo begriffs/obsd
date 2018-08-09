@@ -1,0 +1,7 @@
+ftp https://cloudflare.cdn.openbsd.org/pub/OpenBSD/snapshots/amd64/bsd.rd
+ftp https://cloudflare.cdn.openbsd.org/pub/OpenBSD/snapshots/amd64/SHA256.sig
+signify -Cp /etc/signify/openbsd-63-base.pub -x SHA256.sig bsd.rd
+
+echo "If that looked good..."
+echo "Copy bsd.rd to the root, boot off it and U"
+echo "After boot, do pkg_add -u and fw_update"
