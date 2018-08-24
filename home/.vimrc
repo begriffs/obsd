@@ -18,3 +18,5 @@ inoremap `ie <esc>0wiif (<esc>A)<Enter>{<Enter>}<Enter>else<Enter>{<Enter>}<Esc>
 inoremap `fo for (<esc>A)<Enter>{<Enter>}<Esc>2k$i
 inoremap `wh <esc>0wiwhile (<esc>A)<Enter>{<Enter>}<Esc>kA<Enter>
 inoremap `sw <esc>0wiswitch (<esc>A)<Enter>{<Enter>default:<Enter>break;<Enter>}<Esc>2kO
+
+inoremap `g __<c-r>=expand("%:t:r")<cr><esc>VgUV:s/[^A-Z]/_/g<cr>yypki#ifndef <esc>j0i#define <esc>o<cr><cr><cr>#endif<esc>2ki
