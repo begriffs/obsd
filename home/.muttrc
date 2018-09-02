@@ -25,8 +25,11 @@ set send_charset="utf-8"
 
 set sort = 'threads'
 set sort_aux = 'reverse-last-date-received'
+set strict_threads = yes
 
-set index_format = "%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?{%.20y}? %?g?{%.20g} ?%s (%c)"
+folder-hook . 'push <collapse-all>'
+
+set index_format = "%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?{%.20y}? %s (%c)"
 
 set sidebar_visible = yes
 set sidebar_width = 15
@@ -74,6 +77,7 @@ bind index l display-message
 bind index gg first-entry
 bind index G last-entry
 bind index h noop
+bind index za collapse-thread
 
 macro index gR "<shell-escape>mbsync -a<enter>" "sync inbox"
 macro index A \
