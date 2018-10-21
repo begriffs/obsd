@@ -1,5 +1,6 @@
 set from = "joe@begriffs.com"
 set realname = "Joe Nelson"
+set hostname = "begriffs.com"
 
 # imap
 
