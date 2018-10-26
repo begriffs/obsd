@@ -11,6 +11,7 @@ set backspace=eol,indent,start
 set noswapfile
 
 inoremap `in <esc>0i#include <<esc>A><Enter>
+inoremap `iN <esc>0i#include "<esc>A"<Enter>
 inoremap `m int main(int argc, char** argv)<Enter>{<Enter>return 0;<Enter>}<Esc>2kA<Enter>
 
 inoremap `if <esc>0wiif (<esc>A)<Enter>{<Enter>}<Esc>kA<Enter>
