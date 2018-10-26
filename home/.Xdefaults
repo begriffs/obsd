@@ -1,5 +1,5 @@
-xterm*font:        xft:inconsolata:pixelsize=20
-
+xterm*loginShell:  true
+xterm*font:        xft:inconsolata:pixelsize=18
 XTerm*termName:    xterm-256color
 
 XTerm*background: rgb:00/00/00
