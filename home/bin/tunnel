@@ -1,1 +1,0 @@
-doas /usr/bin/pkill -signal HUP openvpn
