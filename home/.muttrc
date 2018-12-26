@@ -88,7 +88,7 @@ bind index za collapse-thread
 
 macro index gR "<shell-escape>mbsync -a<enter>" "sync inbox"
 macro index A \
-    "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
+    "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter><tag-pattern>~O<enter><tag-prefix><clear-flag>O<untag-pattern>.<enter>" \
     "mark all new as read"
 
 bind pager h exit
