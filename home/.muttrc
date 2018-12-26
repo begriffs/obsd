@@ -12,7 +12,6 @@ set record = +Sent
 
 # NOTE: you have to create these cache folders or else the caching won't happen
 set header_cache = ~/var/mutt/cache/headers
-set message_cachedir = ~/var/mutt/cache/bodies
 set tmpdir = ~/var/mutt/temp
 
 mailboxes +Archive +DMARC +Drafts +EFF +INBOX +friends +Logs +News +Sent +Spam +craigslist +github +gnupg-users +local +pg +pg-docs +pg-ann +pg-www +radio +tcmaker +bsd-misc +bsd-tech +bsd-bugs +bsd-ann
