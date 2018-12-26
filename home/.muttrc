@@ -33,12 +33,10 @@ folder-hook . 'push <collapse-all>'
 
 set index_format = "%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?{%.20y}? %s (%c)"
 
-set sidebar_format = "%B%*  %N %n"
+set sidebar_format = "%B%*  %N"
 set sidebar_visible = yes
-set sidebar_width = 16
+set sidebar_width = 15
 set mail_check_stats = yes
-
-color sidebar_new yellow default
 
 set status_chars = " *%A"
 set status_format = "-- [ Folder: %f ]--[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%? (%t tagged)? ]--%>-%?p?( %p postponed )?--"
