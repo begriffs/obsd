@@ -15,7 +15,7 @@ set header_cache = ~/var/mutt/cache/headers
 set message_cachedir = ~/var/mutt/cache/bodies
 set tmpdir = ~/var/mutt/temp
 
-mailboxes +Archive +DMARC +Drafts +EFF +INBOX +Logs +News +Sent +Spam +bsd-ann +craigslist +github +gnupg-users +local +pg +radio +tcmaker +bsd-misc +bsd-tech +bsd-bugs +bsd-ann +sr^ht +lobsters
+mailboxes +Archive +DMARC +Drafts +EFF +INBOX +friends +Logs +News +Sent +Spam +craigslist +github +gnupg-users +local +pg +pg-docs +pg-ann +pg-www +radio +tcmaker +bsd-misc +bsd-tech +bsd-bugs +bsd-ann
 
 # smtp
 
