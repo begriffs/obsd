@@ -33,8 +33,10 @@ folder-hook . 'push <collapse-all>'
 
 set index_format = "%4C %Z %{%b %d} %-15.15L %?M?(#%03M)&(%4l)? %?y?{%.20y}? %s (%c)"
 
+set sidebar_format = "%B%*  %N %n"
 set sidebar_visible = yes
-set sidebar_width = 15
+set sidebar_width = 16
+set mail_check_stats = yes
 
 color sidebar_new yellow default
 
@@ -74,6 +76,7 @@ set edit_headers = yes
 bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
 bind index,pager \Cl sidebar-open
+bind index,pager \Cf sidebar-toggle-visible
 
 bind index l display-message
 bind index gg first-entry
