@@ -121,99 +121,83 @@ bind index _ collapse-all
 
 bind pager,index R group-reply
 
-# color body brightcolor6 color0 "(https?|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
-# color body brightcolor6 color0 "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
-# color body brightcolor6 color0 "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
-# color error brightcolor1 color0
-# color hdrdefault color5 color0
-# color header brightcolor5 color0 "^(From)"
-# color header brightcolor5 color0 "^(Subject)"
-# color index color7 color0 "~A" # All messages
-# color index brightcolor7 color0 "~U" # Unread messages
-# color index color19 color0 "~D" # Deleted messages
-# color index brightcolor11 color0 "~T" # "Tagged" (selected) messages.
-# color indicator color0 color2
-# color message color3 color0 # Connection messages etc.
-# color prompt color3 color0
-# color quoted color6 color0
-# color quoted1 color4 color0
-# color quoted2 color5 color0
-# color sidebar_highlight color0 brightcolor2
-# color sidebar_indicator brightcolor2 color0
-# color signature color8 color0
-# color status color20 color19
-# color tree color5 default # Arrow in threads.
+## Color
+## ripped off from https://github.com/rgil-shub/config/blob/master/.mutt/colors
 
-# Colours for items in the index
-color index brightcyan black ~N
-color index brightcolor7 black "~U" # Unread messages
-color index brightyellow black ~F
-color index black green ~T
-color index brightred black ~D
-mono index bold ~N
-mono index bold ~F
-mono index bold ~T
-mono index bold ~D
+# basic colors
+color normal     white         default
+color error      brightred     default
+color tilde      magenta       default
+color message    white         default
+color markers    red           white
+color attachment brightcyan    default
+color search     brightwhite   green
+color status     brightyellow  default
+# set arrow_cursor
+color indicator  brightyellow  color236
+color tree       yellow        default
+# index
+color index blue        default "~P" # messages from me
+color index brightblue  default "~v" # threads
+color index magenta     default "~F" # flagged messages
+color index green       default "~T" # tagged messages
+color index red         default "~=" # duplicated messages
+color index brightwhite default "~O" # new messages
+color index brightwhite default "~N" # new messages
+color index brightred   default "~D" # deleted messages
+# compose
+color compose header brightwhite default
+color compose security_none red default
+color compose security_encrypt brightgreen default
+color compose security_sign brightgreen default
+color compose security_both brightgreen default
+# headers
+color hdrdefault white   default
+color header brightblue  default ^Subject:
+color header white       default ^From:
+color header magenta     default ^User-Agent:
+color header magenta     default ^X-Mailer:
+color header magenta     default ^X-Operating-System:
+color header magenta     default ^X-PGP-Key:
+color header brightred   default "^(X-Priority: 1)"           # message priority
+color header brightred   default "^(Importance: high)"        # message priority
+color header brightgreen default "^(X-Tls-Protocol: TLSv1.3)" # sieve rule
+color header magenta     default "^(X-Tls-Protocol: TLSv1.2)" # sieve rule
+color header brightred   default "^(X-Tls-Protocol: TLSv1.1)" # sieve rule
+color header brightred   default "^(X-Tls-Protocol: TLSv1.0)" # sieve rule
+color header brightred   default "^(X-Tls-Protocol: NONE)"    # sieve rule
+color header magenta     default "^(X-Tls-Cipher)"            # sieve rule
+color header brightred   default "^(X-Tls-Cipher: NONE)"      # sieve rule
+# body
+color quoted    blue          default
+color quoted1   cyan          default
+color quoted2   yellow        default
+color signature magenta       default
+color bold      brightmagenta default
+color underline brightgreen   default
+color body magenta    default "(ftp|http|https)://[^ ]+"   # point out URLs
+color body magenta    default [-a-z_0-9.]+@[-a-z_0-9.]+    # e-mail addresses
+color body brightcyan default         "[;:][-o][)/(|]"     # emoticons
+color body brightcyan default         "[;:][)(|]"          # emoticons
+color body brightcyan default         "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body brightcyan default         "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body brightcyan default         "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|\
+                                       |FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|\
+                                       |IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
+# pgp
+color body yellow     default "^gpg: .*"
+color body yellow     default "^Hash: .*"
+color body brightred  default "^gpg: Firma INCORRECTA.*"
+color body brightred  default "^gpg: BAD signature.*"
+color body brightred  default "^Bad signature from:*"
+color body green      default "^gpg: Firma correcta.*"
+color body green      default "^gpg: Good signature .*"
+color body green      default "^Good signature from:*"
+color body brightcyan default "-----BEGIN PGP SIGNED MESSAGE-----"
+color body brightcyan default "-----BEGIN PGP SIGNATURE-----"
+color body brightcyan default "-----END PGP SIGNATURE-----"
 
-# Highlights inside the body of a message.
-
-# URLs
-color body brightgreen black "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
-color body brightgreen black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
-mono body bold "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
-mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
-# email addresses
-color body brightgreen black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
-# header
-color header green black "^from:"
-color header green black "^to:"
-color header green black "^cc:"
-color header green black "^date:"
-color header yellow black "^newsgroups:"
-color header yellow black "^reply-to:"
-color header brightcyan black "^subject:"
-color header red black "^x-spam-rule:"
-color header green black "^x-mailer:"
-color header yellow black "^message-id:"
-color header yellow black "^Organization:"
-color header yellow black "^Organisation:"
-color header yellow black "^User-Agent:"
-color header yellow black "^message-id: .*pine"
-color header yellow black "^X-Fnord:"
-color header yellow black "^X-WebTV-Stationery:"
-color header yellow black "^X-Message-Flag:"
-color header yellow black "^X-Spam-Status:"
-color header yellow black "^X-SpamProbe:"
-color header red black "^X-SpamProbe: SPAM"
-# Coloring quoted text - coloring the first 7 levels:
-color quoted cyan black
-color quoted1 yellow black
-color quoted2 red black
-color quoted3 green black
-color quoted4 cyan black
-color quoted5 yellow black
-color quoted6 red black
-color quoted7 green black
-# Default color definitions
-color signature brightmagenta black
-color indicator black cyan
-color attachment black green
-color error red black
-color message white black
-color search brightwhite magenta
-color status brightyellow blue
-color tree brightblue black
-color normal white black
-color tilde green black
-color bold brightyellow black
-#color underline magenta black
-color markers brightcyan black
-# Colour definitions when on a mono screen
-mono bold bold
-mono underline underline
-mono indicator reverse
-
-# Patch syntax highlighting                                                    
+# Patch syntax highlighting
 color   body    brightwhite     default         ^(diff).*
 color   body    green           default         ^[\+][^\+].*
 color   body    red             default         ^[\-][^\-].*
