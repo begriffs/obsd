@@ -1,6 +1,7 @@
 xterm*loginShell:  true
 xterm*font:        xft:inconsolata:pixelsize=18
 XTerm*termName:    xterm-256color
+XTerm*utf8:        2
 
 XTerm*background: rgb:00/00/00
 XTerm*foreground: rgb:ff/ff/ff
