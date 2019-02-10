@@ -62,7 +62,7 @@ unignore From To Reply-To CC Bcc Subject Date Organization X-Label X-Mailer User
 
 # writing
 
-set editor='vim + -c "set ft=mail" -c "set tw=72" -c "set wrap" -c "set spell spelllang=en"'
+set editor='vim + -c "set ft=mail" -c "set tw=72" -c "set fo=tanq" -c "set wrap" -c "set spell spelllang=en"'
 set include=yes
 set fast_reply
 set copy=yes
