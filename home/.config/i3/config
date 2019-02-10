@@ -14,6 +14,10 @@ bindsym $mod+$down  focus down
 bindsym $mod+$up    focus up
 bindsym $mod+$right focus right
 
+bindcode 174 focus left
+bindcode 176 focus right
+bindcode 160 focus up
+
 bindsym $mod+Shift+$left  move left
 bindsym $mod+Shift+$down  move down
 bindsym $mod+Shift+$up    move up
