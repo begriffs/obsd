@@ -3,3 +3,5 @@ xrandr --output DP1 --off
 # xcalib /home/j/.config/icc/t430.icc
 
 doas /sbin/sysctl machdep.lidaction=1
+
+rm $HOME/.config/check-mail
