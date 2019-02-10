@@ -1,0 +1,1 @@
+* * * * * /bin/test -e /home/j/.config/check-mail && /usr/local/bin/mbsync -a
