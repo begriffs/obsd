@@ -7,7 +7,7 @@ set tabstop=4
 set shiftwidth=4
 
 set cindent
-set cinoptions="(0,t0"
+set cinoptions="Ls,:0,l1,t0,(s,U1,W4"
 set formatoptions=croq
 
 set backspace=eol,indent,start
