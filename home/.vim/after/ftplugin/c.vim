@@ -15,7 +15,7 @@ setlocal ch=2
 setlocal foldmethod=syntax
 setlocal foldlevel=10
 
-setlocal path=.,,*/include,./*/include
+setlocal path=.,,*/include/**2,./*/include/**2
 setlocal path+=/usr/include/**4,/usr/local/include/**3
 
 setlocal tags=./tags,**5/tags,tags;~
