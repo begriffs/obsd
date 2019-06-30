@@ -25,7 +25,11 @@ set smartcase
 
 set backspace=eol,indent,start
 
-map <silent> <F5> :make<cr><cr><cr>:cc<cr>
+" real make
+map <silent> <F5> :make<cr><cr><cr>
+" GNUism, for building postgres
+map <silent> <s-F5> :make -w<cr><cr><cr>
+
 nmap ]q :cnext<cr>
 nmap ]Q :clast<cr>
 nmap [q :cprev<cr>
