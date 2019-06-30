@@ -17,6 +17,14 @@ endif
 
 " formatting variations documented at
 " https://clang.llvm.org/docs/UsersManual.html#formatting-of-diagnostics
+"
+" It should be possible to make this work for the combination of
+" -fno-show-column and -fcaret-diagnostics as well with multiline
+" and %p, but I was too lazy to figure it out.
+"
+" The %D and %X patterns are not clang per se. They capture the directory
+" change messages from (GNU) 'make -w'. I needed this for building a project
+" which used recursive Makefiles.
 
 CompilerSet errorformat=
 	\%f:%l%c:{%*[^}]}{%*[^}]}:\ %trror:\ %m,
@@ -34,8 +42,5 @@ CompilerSet errorformat=
 	\%X%*\\a[%*\\d]:\ Leaving\ directory\ %*[`']%f',
 	\%X%*\\a:\ Leaving\ directory\ %*[`']%f',
 	\%DMaking\ %*\\a\ in\ %f
-
-" the %D and %X patterns capture the directory change messages
-" from (GNU) 'make -w'. Needed for building postgres.
 
 CompilerSet makeprg=make
