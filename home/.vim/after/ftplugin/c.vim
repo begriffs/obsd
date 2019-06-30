@@ -4,10 +4,10 @@ setlocal cindent
 setlocal cino="Ls,:0,l1,t0,(s,U1,W4"
 
 " show trailing whitespace
-let c_space_errors=1
+" let c_space_errors=1
 
 " for quickfix errorformat
-compiler gcc
+compiler clang
 " shows long build messages better
 setlocal ch=2
 
@@ -28,7 +28,7 @@ setlocal completeopt=menu
 
 iabbrev #i #include
 iabbrev #d #define
-iabbrev main() int main(int argc, char **argv)
+iabbrev main() int main(int argc, const char **argv)
 
 " add #include guard
 iabbrev #g _<c-r>=expand("%:t:r")<cr><esc>VgUV:s/[^A-Z]/_/g<cr>A_H<esc>yypki#ifndef <esc>j0i#define <esc>o<cr><cr>#endif<esc>2ki
