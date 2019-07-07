@@ -10,9 +10,6 @@ syntax on
 " decent colors that ship with vim
 colorscheme pablo
 
-set backupdir=/tmp
-set backupext=~
-
 " tabs for indentation, spaces for alignment
 set noexpandtab
 set tabstop=4
@@ -41,3 +38,24 @@ nmap [Q :cfirst<cr>
 " formatting is more common than Ex mode
 nmap Q gq
 vmap Q gq
+
+" protect changes before writes
+" default values of updatecount (200 keystrokes) and
+" updatetime (4 seconds) are fine
+set swapfile
+" btw, mount on a fast fs when possible
+set directory^=~/.vim/swap//
+
+" persist the undo tree for each file
+set undofile
+set undodir^=~/.vim/undo//
+
+" protect against crash during partial-write
+set writebackup
+" but do not persist backup after successful write
+" because we can mostly recover with our swap files
+set nobackup
+" whenever safe, use rename-and-write-new method for speed
+set backupcopy=auto
+" honoring 'backup//' requires vim patch-8.1.0251
+set backupdir^=~/.vim/backup//
