@@ -1,3 +1,4 @@
+" put the m in vim
 set nocompatible
 
 " use CTRL-G to show position
@@ -12,6 +13,7 @@ colorscheme pablo
 set backupdir=/tmp
 set backupext=~
 
+" tabs for indentation, spaces for alignment
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -30,6 +32,7 @@ map <silent> <F5> :make<cr><cr><cr>
 " GNUism, for building postgres
 map <silent> <s-F5> :make -w<cr><cr><cr>
 
+" quickfix shortcuts
 nmap ]q :cnext<cr>
 nmap ]Q :clast<cr>
 nmap [q :cprev<cr>
