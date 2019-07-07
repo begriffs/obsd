@@ -29,6 +29,9 @@ map <silent> <F5> :make<cr><cr><cr>
 " GNUism, for building postgres
 map <silent> <s-F5> :make -w<cr><cr><cr>
 
+" fuzzy-find lite
+nmap <Leader><space> :e **/
+
 " quickfix shortcuts
 nmap ]q :cnext<cr>
 nmap ]Q :clast<cr>
@@ -38,6 +41,9 @@ nmap [Q :cfirst<cr>
 " formatting is more common than Ex mode
 nmap Q gq
 vmap Q gq
+
+" mouse can be useful, enable in normal mode
+set mouse=n
 
 " protect changes before writes
 " default values of updatecount (200 keystrokes) and
