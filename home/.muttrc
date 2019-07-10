@@ -83,7 +83,7 @@ bind index G last-entry
 bind index h noop
 bind index za collapse-thread
 
-macro index gR "<shell-escape>mbsync -a<enter>" "sync inbox"
+macro index gR "<shell-escape>mbsync -a<enter><check-stats><enter>" "sync inbox"
 macro index A \
     "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter><tag-pattern>~O<enter><tag-prefix><clear-flag>O<untag-pattern>.<enter>" \
     "mark all new as read"
