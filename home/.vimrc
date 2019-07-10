@@ -15,6 +15,9 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 
+" I can figure it out w/o a beep
+set belloff=all
+
 " wrapping can be confusing
 set nowrapscan
 
@@ -45,6 +48,11 @@ vmap Q gq
 " mouse can be useful, enable in normal mode
 set mouse=n
 
+" show subfolders as ascii tree
+let g:netrw_liststyle = 3
+" hide help banner -- you can show it with 'I'
+let g:netrw_banner = 0
+
 " Protect changes before writes.  Default values of
 " updatecount (200 " keystrokes) and updatetime
 " (4 seconds) are fine
@@ -68,3 +76,8 @@ if has("patch-8.1.0251")
 	" deal either way, since they usually get deleted
 	set backupdir^=~/.vim/backup//
 end
+
+" shortcuts for 3-way merge
+map <Leader>1 :diffget LOCAL<CR>
+map <Leader>2 :diffget BASE<CR>
+map <Leader>3 :diffget REMOTE<CR>
