@@ -14,7 +14,7 @@ set record = +Sent
 set header_cache = ~/var/mutt/cache/headers
 set tmpdir = ~/var/mutt/temp
 
-mailboxes +Archive +DMARC +Drafts +INBOX +friends +Logs +News +Sent +Spam +craigslist +github +gnupg-users +local +pg +pg-docs +pg-ann +pg-www +radio +tcmaker +bsd-misc +bsd-tech +bsd-bugs +bsd-ann
+mailboxes +Archive +DMARC +Drafts +INBOX +util +friends +Logs +News +Sent +Spam +craigslist +github +gnupg-users +local +pg +pg-docs +pg-ann +pg-www +radio +tcmaker +icu +bsd-misc +bsd-tech +bsd-bugs +bsd-ann
 
 # smtp
 
