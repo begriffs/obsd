@@ -93,10 +93,8 @@ macro index A \
 bind pager h exit
 bind pager gg top
 bind pager G bottom
-bind pager j next-line
-bind pager J next-entry
-bind pager k previous-line
-bind pager K previous-entry
+bind pager J next-line
+bind pager K previous-line
 bind pager <down> next-line
 bind pager <up> previous-line
 
