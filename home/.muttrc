@@ -210,3 +210,13 @@ color   body    brightwhite     default         ^(Cc)
 # external tools
 
 unset wait_key
+
+# PGP
+
+source /usr/local/share/examples/mutt/gpg.rc
+
+# shell out to gpg programs rather than using gpgme library
+unset crypt_use_gpgme
+
+set pgp_default_key="0xdeadbeef"
+set pgp_sign_as="0xc0ffee"
