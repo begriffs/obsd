@@ -32,3 +32,6 @@ iabbrev main() int main(int argc, const char **argv)
 
 " add #include guard
 iabbrev #g <C-R>=toupper(substitute(expand("%:p:h:t") . "_" . expand("%:t:r") . "_H", "[^a-z]", "_", "ig"))<CR><esc>yypki#ifndef <esc>j0i#define <esc>o<cr><cr>#endif<esc>2ki
+
+" project grep (cscope lite)
+nmap <F4> :vimgrep <cword> **/*.[ch]<cr>
