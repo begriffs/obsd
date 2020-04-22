@@ -1,0 +1,1 @@
+ipcs -a | tail -n 4 | awk '{print $2}' | xargs -L 1 ipcrm -s
