@@ -37,4 +37,4 @@ iabbrev #g <C-R>=toupper(substitute(expand("%:p:h:t") . "_" . expand("%:t:r") . 
 nmap <buffer><silent> <LocalLeader>d :echo system('cdecl -x C99', 'explain ' . getline('.'))<CR>
 
 " project grep (cscope lite)
-nmap <F4> :vimgrep <cword> **/*.[ch]<cr>
+nmap <buffer> <F4> :vimgrep <cword> **/*.[ch]<cr>
