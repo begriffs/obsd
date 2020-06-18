@@ -28,7 +28,7 @@ setlocal completeopt=menu
 
 iabbrev #i #include
 iabbrev #d #define
-iabbrev main() int main(int argc, const char **argv)
+iabbrev main() int main(int argc, char **argv)
 
 " add #include guard
 iabbrev #g <C-R>=toupper(substitute(expand("%:p:h:t") . "_" . expand("%:t:r") . "_H", "[^a-z]", "_", "ig"))<CR><esc>yypki#ifndef <esc>j0i#define <esc>o<cr><cr>#endif<esc>2ki
