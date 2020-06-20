@@ -32,6 +32,9 @@ map <silent> <F5> :make<cr><cr><cr>
 " GNUism, for building postgres
 map <silent> <s-F5> :make -w<cr><cr><cr>
 
+map <silent> <F8> :copen<cr>
+map <silent> <F7> :cclose<cr>
+
 " fuzzy-find lite
 nmap <Leader><space> :e **/
 
