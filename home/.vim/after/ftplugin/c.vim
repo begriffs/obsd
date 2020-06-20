@@ -36,5 +36,65 @@ iabbrev #g <C-R>=toupper(substitute(expand("%:p:h:t") . "_" . expand("%:t:r") . 
 " run cdecl on line
 nmap <buffer><silent> <LocalLeader>d :echo system('cdecl -x C99', 'explain ' . substitute(getline('.'), '=.*', '', ''))<CR>
 
-" project grep (cscope lite)
-nmap <buffer> <F4> :vimgrep <cword> **/*.[ch]<cr>
+" Adapted from Jason Duell's cscope settings
+if has("cscope")
+	" place results into quickfix, and clear it each time
+	setlocal cscopequickfix=s-,c-,d-,i-,t-,e-,a-
+
+	" show parent directory name in file path
+	setlocal cscopepathcomp=2
+
+	" steal the CTRL-] key
+	setlocal cst
+
+	" attempt to connect quietly
+	setlocal nocsverb
+	" add any database in current directory
+	if filereadable("cscope.out")
+		cs add cscope.out
+	" else add database pointed to by environment
+	elseif $CSCOPE_DB != ""
+		cs add $CSCOPE_DB
+	endif
+	setlocal csverb
+
+	" 's'   symbol: find all references to the token under cursor
+	" 'g'   global: find global definition(s) of the token under cursor
+	" 'c'   calls:  find all calls to the function name under cursor
+	" 't'   text:   find all instances of the text under cursor
+	" 'e'   egrep:  egrep search for the word under cursor
+	" 'f'   file:   open the filename under cursor
+	" 'i'   includes: find files that include the filename under cursor
+	" 'd'   called: find functions that function under cursor calls
+	nmap <buffer><C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <buffer><C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <buffer><C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+	" Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim)
+	" split vertically, with search result displayed in
+	" the new window.
+	nmap <buffer><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <buffer><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <buffer><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+	" Hitting CTRL-space *twice* does a horizontal
+	" split instead of a vertical one
+	nmap <buffer><C-@><C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@><C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@><C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@><C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@><C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <buffer><C-@><C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <buffer><C-@><C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <buffer><C-@><C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+endif
