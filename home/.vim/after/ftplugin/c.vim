@@ -34,7 +34,7 @@ iabbrev main() int main(int argc, char **argv)
 iabbrev #g <C-R>=toupper(substitute(expand("%:p:h:t") . "_" . expand("%:t:r") . "_H", "[^a-z]", "_", "ig"))<CR><esc>yypki#ifndef <esc>j0i#define <esc>o<cr><cr>#endif<esc>2ki
 
 " run cdecl on line
-nmap <buffer><silent> <LocalLeader>d :echo system('cdecl -x C99', 'explain ' . getline('.'))<CR>
+nmap <buffer><silent> <LocalLeader>d :echo system('cdecl -x C99', 'explain ' . substitute(getline('.'), '=.*', '', ''))<CR>
 
 " project grep (cscope lite)
 nmap <buffer> <F4> :vimgrep <cword> **/*.[ch]<cr>
