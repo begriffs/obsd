@@ -61,6 +61,11 @@ let g:netrw_banner = 0
 " don't show object files
 let g:netrw_list_hide = "\.[oa]$"
 
+" use a more readable diff algorithm
+if has("patch-8.1.0360")
+	set diffopt+=internal,algorithm:patience
+endif
+
 " Protect changes before writes.  Default values of
 " updatecount (200 " keystrokes) and updatetime
 " (4 seconds) are fine
