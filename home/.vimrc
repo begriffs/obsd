@@ -51,6 +51,9 @@ vmap Q gq
 " mouse can be useful, enable in normal mode
 set mouse=n
 
+" pop vertical splits to the right, not left
+set splitright
+
 " show subfolders as ascii tree
 let g:netrw_liststyle = 3
 " hide help banner -- you can show it with 'I'
