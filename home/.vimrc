@@ -58,6 +58,8 @@ set splitright
 let g:netrw_liststyle = 3
 " hide help banner -- you can show it with 'I'
 let g:netrw_banner = 0
+" don't show object files
+let g:netrw_list_hide = "\.[oa]$"
 
 " Protect changes before writes.  Default values of
 " updatecount (200 " keystrokes) and updatetime
