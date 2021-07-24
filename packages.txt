@@ -1,0 +1,23 @@
+# pkg_info -t
+
+bison-3.3.2p2       GNU parser generator
+colordiff-1.0.19    colorized diff tool
+firefox-88.0.1      Firefox web browser
+git-2.31.1          distributed version control system
+hexchat-2.14.3p0    GTK+2 IRC Client
+i3-4.19.2           improved dynamic tiling window manager
+intel-firmware-20210608v0 microcode update binaries for Intel CPUs
+inteldrm-firmware-20201218 firmware binary images for inteldrm(4) driver
+isync-1.4.1p0       synchronize IMAP4 and maildir mailboxes
+iwn-firmware-5.11p1 firmware binary images for iwn(4) driver
+jasper-2.0.14       reference implementation of JPEG-2000
+lynx-2.8.9rel1p0    text web browser
+msmtp-1.8.7         SMTP plugin for MUAs
+mutt-2.0.6v3-gpgme-sasl tty-based e-mail client
+quirks-3.633        exceptions to pkg_add rules
+redshift-1.12p4     automatic color temperature adjustment
+urlview-0.9p8       curses-based URL ripper
+uvideo-firmware-1.2p3 firmware binary images for uvideo(4) driver
+vim-8.2.2580-no_x11 vi clone, many additional features
+vlc-3.0.12p0        VideoLAN client; multimedia player
+w3m-0.5.3pl20210102p0 pager/text-based web browser
