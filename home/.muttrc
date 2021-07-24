@@ -77,7 +77,7 @@ bind index,pager \Cj sidebar-next
 bind index,pager \Cl sidebar-open
 bind index,pager \Cf sidebar-toggle-visible
 
-macro pager \Cu <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro pager \Cu "<enter-command>set pipe_decode = yes<enter><pipe-message>urlview<enter><enter-command>set pipe_decode = no<enter>" "view URLs"
 
 bind index l display-message
 bind index gg first-entry
