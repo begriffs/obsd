@@ -1,2 +1,2 @@
 #add the following line:
-/dev/sd2i /mnt/key msdos rw,noexec,noauto 0 0
+/dev/sd3i /mnt/key msdos rw,noexec,noauto 0 0
