@@ -1,5 +1,8 @@
-xrandr --output DP1 --auto && xrandr --output LVDS1 --off
-# xcalib /home/j/.config/icc/dell_u2417h.icc
+#!/bin/sh
+set -e
+
+xrandr --output HDMI-1 --auto
+xrandr --output LVDS-1 --off
 
 doas /sbin/sysctl machdep.lidaction=0
 

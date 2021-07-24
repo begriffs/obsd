@@ -1,6 +1,8 @@
-xrandr --output LVDS1 --auto
-xrandr --output DP1 --off
-# xcalib /home/j/.config/icc/t430.icc
+#!/bin/sh
+set -e
+
+xrandr --output LVDS-1 --auto
+xrandr --output HDMI-1 --off
 
 doas /sbin/sysctl machdep.lidaction=1
 
