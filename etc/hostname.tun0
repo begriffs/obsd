@@ -1,1 +1,0 @@
-!/usr/local/sbin/openvpn --daemon --cd /etc/openvpn --config US\ Chicago.ovpn --auth-user-pass password

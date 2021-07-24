@@ -1,4 +1,2 @@
 apmd_flags="-A"
-openvpn_flags=--cd /etc/openvpn --config US\ Chicago.ovpn --auth-user-pass password
-pkg_scripts=openvpn
 sshd_flags=NO
