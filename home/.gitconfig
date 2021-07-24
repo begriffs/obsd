@@ -1,0 +1,6 @@
+[user]
+	name = Joe Nelson
+	email = joe@begriffs.com
+
+[include]
+	path = sixarm_git_gitconfig/gitconfig
