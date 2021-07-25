@@ -32,9 +32,9 @@ Xterm*savelines: 16384
 XTerm*ScrollBar: false
 XTerm*scrollTtyOutput: false
 
-XTerm*on2Clicks: word
-XTerm*on3Clicks: regex [^ \n]+
-XTerm*on4Clicks: line
+XTerm*vt100.on2Clicks: word
+XTerm*vt100.on3Clicks:regex [^[:space:],()<>'"]+
+XTerm*vt100.on4Clicks:line
 
 XTerm.VT100.translations: #override \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
