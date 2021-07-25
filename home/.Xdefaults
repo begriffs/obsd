@@ -45,10 +45,11 @@ XTerm*ScrollBar: false
 XTerm*scrollTtyOutput: false
 
 XTerm*vt100.on2Clicks: word
-XTerm*vt100.on3Clicks:regex [^[:space:],()<>'"]+
+XTerm*vt100.on3Clicks:regex [^[:space:],()<>'"|]+
 XTerm*vt100.on4Clicks:line
 
 XTerm.VT100.translations: #override \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
-	Ctrl <Key>o: exec-formatted("firefox '%t'", PRIMARY) select-start() select-end()
+	Ctrl <Key>o: exec-formatted("firefox '%t'", PRIMARY) select-start() select-end() \n\
+	Ctrl <Key>e: exec-formatted("xterm -e vim '%t'", PRIMARY) select-start() select-end()
