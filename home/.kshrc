@@ -12,6 +12,8 @@ export PS1="\W$ "
 export SSH_AUTH_SOCK=~/.ssh/ssh-socket
 
 alias g="git"
+alias pman="man -M $HOME/posix-man/issue7"
+alias pman6="man -M $HOME/posix-man/issue6"
 
 ssh-add -l >/dev/null 2>&1
 if [ $? = 2 ]; then
