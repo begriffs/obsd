@@ -1,7 +1,19 @@
+XLock.description : off
+XLock.echokeys    : off
+XLock.info        :
+XLock.background  : black
+XLock.foreground  : white
+XLock.mode        : blank
+XLock.username    : user: 
+XLock.password    : pass: 
+
 xterm*loginShell:  true
 xterm*font:        xft:inconsolata:pixelsize=18
 XTerm*termName:    xterm-256color
 XTerm*utf8:        2
+! remove the additional black border
+XTerm*borderWidth            : 0
+XTerm*internalBorder         : 2
 
 XTerm*background: rgb:00/00/00
 XTerm*foreground: rgb:ff/ff/ff
