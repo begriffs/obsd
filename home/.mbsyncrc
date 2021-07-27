@@ -22,10 +22,10 @@ Account fastmail
 ## CHANNELS #########################
 
 Channel begriffs
-Master :begriffs_fastmail:
-Slave :begriffs_local:
+Far :begriffs_fastmail:
+Near :begriffs_local:
 Patterns * !Trash
 MaxSize 0
-Create Slave
-Remove Slave
-Expunge Slave
+Create Near
+Remove Near
+Expunge Near
