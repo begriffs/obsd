@@ -3,4 +3,4 @@
 	email = joe@begriffs.com
 
 [include]
-	path = sixarm_git_gitconfig/gitconfig
+	path = .sixarm_git_gitconfig/gitconfig
