@@ -51,5 +51,6 @@ XTerm*vt100.on4Clicks:line
 XTerm.VT100.translations: #override \n\
 	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
 	Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
-	Ctrl <Key>o: exec-formatted("firefox '%t'", PRIMARY) select-start() select-end() \n\
-	Ctrl <Key>e: exec-formatted("xterm -e vim '%t'", PRIMARY) select-start() select-end()
+	Ctrl Shift <Key>o: exec-formatted("chrome '%t'", PRIMARY) select-start() select-end() \n\
+	Ctrl <Key>e: exec-formatted("xterm -e vim '%t'", PRIMARY) select-start() select-end() \n\
+	Ctrl Shift <Key>H: set-altscreen(toggle)
