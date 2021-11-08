@@ -54,6 +54,10 @@ set mouse=n
 " pop vertical splits to the right, not left
 set splitright
 
+" more shell-like tab completion
+set wildmode=longest,list,full
+set wildmenu
+
 " show subfolders as ascii tree
 let g:netrw_liststyle = 3
 " hide help banner -- you can show it with 'I'
