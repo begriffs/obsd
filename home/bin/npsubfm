@@ -1,0 +1,1 @@
+curl -N -H 'Icy-MetaData: 1' http://fmsub.radioca.st/Sub.FM 2>/dev/null | sed -n "/.*StreamTitle='\(.*\)';.*/{s//\1/p;q;}"
