@@ -249,7 +249,7 @@ Ddd*checkGrabs: on
 Ddd*saveHistoryOnExit: on
 Ddd*paperSize: 210mm x 297mm
 Ddd*blinkWhileBusy: on
-Ddd*splashScreen: on
+Ddd*splashScreen: off
 Ddd*startupTips: off
 
 ! Keys.
