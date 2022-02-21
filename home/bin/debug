@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# use egdb rather than old gdb in base
-ddd --gdb --debugger /usr/local/bin/egdb $*
