@@ -2,7 +2,7 @@
 Ddd*dddinitVersion: 3.3.12
 
 ! Debugger settings.
-Ddd*autoDebugger: on
+Ddd*autoDebugger: off
 Ddd*debugger: gdb
 Ddd*useSourcePath: off
 ! Ddd*bashSettings: 
