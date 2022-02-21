@@ -7,6 +7,7 @@ System and user config files for a more pleasant laptop.
 * ssh-agent
 * using new built-in wifi switching
 * lean vimrc for C programming
+* properly configured DDD (with egdb inferior)
 * usb key in fstab
 * docking/undocking scripts
 * copy/paste working between xterm and firefox
