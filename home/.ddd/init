@@ -226,7 +226,7 @@ set remote interrupt-sequence Ctrl-C
 ! Source.
 Ddd*findWordsOnly: on
 Ddd*findCaseSensitive: on
-! Ddd*tabWidth: 8
+Ddd*tabWidth: 4
 ! Ddd*indentSource: 0
 ! Ddd*indentCode: 4
 Ddd*cacheSourceFiles: on
