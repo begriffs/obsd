@@ -1,4 +1,3 @@
-
 ! DO NOT ADD ANYTHING BELOW THIS LINE -- DDD WILL OVERWRITE IT
 Ddd*dddinitVersion: 3.3.12
 
@@ -78,8 +77,8 @@ Ddd*themes: \
 ! smalltitles.vsl	\n\
 ! red.vsl	\n\
 ! green.vsl	\n\
-! 	green.vsl\n\
 x86.vsl	$eax*;$ebx*;$ecx*;$edx*;($eflags &*\n\
+! 	green.vsl\n\
 rednil.vsl	*\n
 
 ! Tips.
@@ -109,8 +108,8 @@ Ddd*activeButtonColorKey: c
 
 ! Command Tool.
 Ddd*commandToolBar: off
-Ddd*toolRightOffset: 30
-Ddd*toolTopOffset: 118
+! Ddd*toolRightOffset: 8
+! Ddd*toolTopOffset: 8
 
 ! Buttons.
 Ddd*consoleButtons: 
