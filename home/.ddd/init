@@ -138,10 +138,10 @@ set displaced-stepping auto (currently off)\n\
 set dprintf-channel \n\
 set dprintf-function printf\n\
 set dprintf-style gdb\n\
-set exec-direction Forward\n\
+set exec-direction forward\n\
 set exec-wrapper \n\
 set extended-prompt (gdb) \n\
-set filename-display Filenames are displayed as \"relative\"\n\
+set filename-display relative\n\
 set follow-exec-mode same\n\
 set gnutarget auto\n\
 set guile print-stack message\n\
@@ -152,14 +152,14 @@ set history size 0d256\n\
 set host-charset auto\n\
 set inferior-tty \n\
 set input-radix 0d10\n\
-set interactive-mode auto (currently on)\n\
+set interactive-mode auto\n\
 set listsize 0d10\n\
 set logging file gdb.txt\n\
 set max-completions 0d200\n\
 set max-user-call-depth 0d1024\n\
-set max-value-size 65536 bytes\n\
-set mem inaccessible-by-default Unknown memory addresses will be treated as inaccessible\n\
-set mpx  Intel Memory Protection Extensions not supported on this target\n\
+set max-value-size 65536\n\
+set mem inaccessible-by-default on\n\
+set mpx bound\n\
 set multiple-symbols all\n\
 set output-radix 0d10\n\
 set print elements 0d200\n\
@@ -170,8 +170,8 @@ set print repeats 0d10\n\
 set print symbol-loading full\n\
 set prompt (gdb) \n\
 set python print-stack message\n\
-set record btrace bts 0d65536\n\
-set record btrace pt 0d16384\n\
+set record btrace bts buffer-size 65536\n\
+set record btrace pt buffer-size 16384\n\
 set record btrace replay-memory-access read-only\n\
 set record full insn-number-max 0d200000\n\
 set record function-call-history-size 0d10\n\
@@ -215,7 +215,7 @@ set remote hostio-setfs-packet auto\n\
 set remote hostio-unlink-packet auto\n\
 set remote hwbreak-feature-packet auto\n\
 set remote install-in-trace-packet auto\n\
-set remote interrupt-sequence Send the ASCII ETX character (Ctrl-c) to the remote target to interrupt the execution of the program\n\
+set remote interrupt-sequence Ctrl-C
 set remote kill-packet auto\n\
 set remote library-info-packet auto\n\
 set remote library-info-svr4-packet auto\n\
@@ -249,7 +249,7 @@ set remote static-tracepoints-packet auto\n\
 set remote supported-packets-packet auto\n\
 set remote swbreak-feature-packet auto\n\
 set remote symbol-lookup-packet auto\n\
-set remote system-call-allowed not allowed\n\
+set remote system-call-allowed 0\n\
 set remote target-features-packet auto\n\
 set remote thread-events-packet auto\n\
 set remote threads-packet auto\n\
@@ -277,7 +277,7 @@ set target-charset auto\n\
 set target-file-system-kind auto\n\
 set target-wide-charset auto\n\
 set tcp connect-timeout 0d15\n\
-set tdesc  The target description will be read from the target\n\
+set tdesc filename \n\
 set trace-buffer-size 0\n\
 set trace-notes \n\
 set trace-stop-notes \n\
