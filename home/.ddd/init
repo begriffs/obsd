@@ -241,7 +241,7 @@ Ddd*allRegisters: off
 ! Ddd*maxUndoSize: 2000000
 
 ! Misc preferences.
-Ddd*keyboardFocusPolicy: POINTER
+Ddd*keyboardFocusPolicy: EXPLICIT
 Ddd*statusAtBottom: on
 Ddd*suppressWarnings: off
 Ddd*warnIfLocked: off
