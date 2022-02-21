@@ -8,8 +8,285 @@ Ddd*useSourcePath: off
 ! Ddd*bashSettings: 
 ! Ddd*dbgSettings: 
 ! Ddd*dbxSettings: 
-! Ddd*gdbSettings: \
-! set print asm-demangle on\n
+Ddd*gdbSettings: \
+set agent off\n\
+set auto-connect-native-target on\n\
+set auto-load python-scripts on\n\
+set auto-solib-add on\n\
+set backtrace past-entry off\n\
+set backtrace past-main off\n\
+set basenames-may-differ off\n\
+set breakpoint always-inserted off\n\
+set breakpoint auto-hw on\n\
+set circular-trace-buffer off\n\
+set code-cache on\n\
+set coerce-float-to-double on\n\
+set confirm off\n\
+set debug auto-load off\n\
+set debug check-physname off\n\
+set debug compile off\n\
+set debug displaced off\n\
+set debug notification off\n\
+set debug parser off\n\
+set debug symfile off\n\
+set debug timestamp off\n\
+set debug xml off\n\
+set detach-on-fork on\n\
+set disassemble-next-line off\n\
+set disconnected-dprintf on\n\
+set disconnected-tracing off\n\
+set editing on\n\
+set exec-done-display off\n\
+set history expansion off\n\
+set history save off\n\
+set logging overwrite off\n\
+set logging redirect off\n\
+set may-insert-breakpoints on\n\
+set may-insert-fast-tracepoints on\n\
+set may-insert-tracepoints on\n\
+set may-interrupt on\n\
+set may-write-memory on\n\
+set may-write-registers on\n\
+set mi-async off\n\
+set non-stop off\n\
+set observer off\n\
+set opaque-type-resolution on\n\
+set overload-resolution on\n\
+set pagination on\n\
+set print address on\n\
+set print array off\n\
+set print array-indexes off\n\
+set print asm-demangle on\n\
+set print demangle on\n\
+set print inferior-events off\n\
+set print null-stop off\n\
+set print object off\n\
+set print pascal_static-members on\n\
+set print pretty off\n\
+set print raw frame-arguments off\n\
+set print sevenbit-strings off\n\
+set print static-members on\n\
+set print symbol on\n\
+set print symbol-filename off\n\
+set print thread-events on\n\
+set print union on\n\
+set print vtbl off\n\
+set record full memory-query off\n\
+set record full stop-at-limit on\n\
+set remote interrupt-on-connect off\n\
+set remotecache off\n\
+set remoteflow off\n\
+set schedule-multiple off\n\
+set stack-cache on\n\
+set startup-with-shell on\n\
+set step-mode off\n\
+set tcp auto-retry on\n\
+set trace-commands off\n\
+set trust-readonly-sections off\n\
+set unwind-on-terminating-exception on\n\
+set unwindonsignal off\n\
+set verbose off\n\
+set write off\n\
+set can-use-hw-watchpoints 1\n\
+set debug arch 0\n\
+set debug dwarf-die 0\n\
+set debug dwarf-line 0\n\
+set debug dwarf-read 0\n\
+set debug expression 0\n\
+set debug frame 0\n\
+set debug infrun 0\n\
+set debug jit 0\n\
+set debug observer 0\n\
+set debug overload 0\n\
+set debug record 0\n\
+set debug remote 0\n\
+set debug serial 0\n\
+set debug symbol-lookup 0\n\
+set debug symtab-create 0\n\
+set debug target 0\n\
+set debug varobj 0\n\
+set stop-on-solib-events 0\n\
+set architecture auto\n\
+set endian auto\n\
+set demangle-style auto\n\
+set language auto\n\
+set disassembly-flavor att\n\
+set follow-fork-mode parent\n\
+set check range auto\n\
+set check type on\n\
+set annotate 1\n\
+set auto-load safe-path /usr/local/share/gdb/auto-load\n\
+set auto-load scripts-directory /usr/local/share/gdb/auto-load\n\
+set backtrace limit 0\n\
+set breakpoint condition-evaluation auto (currently host)\n\
+set breakpoint pending auto\n\
+set case-sensitive auto\n\
+set compile-args Compile command command-line arguments are \"-O0 -gdwarf-4 -fPIE -Wall  -Wno-implicit-function-declaration -Wno-unused-but-set-variable -Wno-unused-variable -fno-stack-protector\"\n\
+set complaints 0\n\
+set cp-abi auto\n\
+set data-directory /usr/local/share/gdb\n\
+set dcache line-size 0d64\n\
+set dcache size 0d4096\n\
+set debug bfd-cache 0\n\
+set debug coff-pe-read 0\n\
+set debug entry-values 0\n\
+set debug py-unwind 0\n\
+set debug stap-expression 0\n\
+set debug-file-directory /usr/local/lib/debug\n\
+set default-collect \n\
+set displaced-stepping auto (currently off)\n\
+set dprintf-channel \n\
+set dprintf-function printf\n\
+set dprintf-style gdb\n\
+set exec-direction Forward\n\
+set exec-wrapper \n\
+set extended-prompt not set\n\
+set filename-display Filenames are displayed as \"relative\"\n\
+set follow-exec-mode same\n\
+set gnutarget auto\n\
+set guile print-stack message\n\
+set height 0\n\
+set history filename /home/j/dev/semln/.gdb_history\n\
+set history remove-duplicates 0\n\
+set history size 0d256\n\
+set host-charset auto\n\
+set inferior-tty \n\
+set input-radix 0d10\n\
+set interactive-mode auto (currently on)\n\
+set listsize 0d10\n\
+set logging file gdb.txt\n\
+set max-completions 0d200\n\
+set max-user-call-depth 0d1024\n\
+set max-value-size 65536 bytes\n\
+set mem inaccessible-by-default Unknown memory addresses will be treated as inaccessible\n\
+set mpx  Intel Memory Protection Extensions not supported on this target\n\
+set multiple-symbols all\n\
+set output-radix 0d10\n\
+set print elements 0d200\n\
+set print entry-values default\n\
+set print frame-arguments scalars\n\
+set print max-symbolic-offset 0\n\
+set print repeats 0d10\n\
+set print symbol-loading full\n\
+set prompt (gdb) \n\
+set python print-stack message\n\
+set record btrace bts 0d65536\n\
+set record btrace pt 0d16384\n\
+set record btrace replay-memory-access read-only\n\
+set record full insn-number-max 0d200000\n\
+set record function-call-history-size 0d10\n\
+set record instruction-history-size 0d10\n\
+set remote P-packet auto\n\
+set remote TracepointSource-packet auto\n\
+set remote X-packet auto\n\
+set remote access-watchpoint-packet auto\n\
+set remote agent-packet auto\n\
+set remote allow-packet auto\n\
+set remote attach-packet auto\n\
+set remote binary-download-packet auto\n\
+set remote breakpoint-commands-packet auto\n\
+set remote btrace-conf-bts-size-packet auto\n\
+set remote btrace-conf-pt-size-packet auto\n\
+set remote catch-syscalls-packet auto\n\
+set remote conditional-breakpoints-packet auto\n\
+set remote conditional-tracepoints-packet auto\n\
+set remote ctrl-c-packet auto\n\
+set remote disable-btrace-packet auto\n\
+set remote disable-randomization-packet auto\n\
+set remote enable-btrace-bts-packet auto\n\
+set remote enable-btrace-pt-packet auto\n\
+set remote exec-event-feature-packet auto\n\
+set remote fast-tracepoints-packet auto\n\
+set remote fetch-register-packet auto\n\
+set remote fork-event-feature-packet auto\n\
+set remote get-thread-information-block-address-packet auto\n\
+set remote get-thread-local-storage-address-packet auto\n\
+set remote hardware-breakpoint-limit -1\n\
+set remote hardware-breakpoint-packet auto\n\
+set remote hardware-watchpoint-length-limit -1\n\
+set remote hardware-watchpoint-limit -1\n\
+set remote hostio-close-packet auto\n\
+set remote hostio-fstat-packet auto\n\
+set remote hostio-open-packet auto\n\
+set remote hostio-pread-packet auto\n\
+set remote hostio-pwrite-packet auto\n\
+set remote hostio-readlink-packet auto\n\
+set remote hostio-setfs-packet auto\n\
+set remote hostio-unlink-packet auto\n\
+set remote hwbreak-feature-packet auto\n\
+set remote install-in-trace-packet auto\n\
+set remote interrupt-sequence Send the ASCII ETX character (Ctrl-c) to the remote target to interrupt the execution of the program\n\
+set remote kill-packet auto\n\
+set remote library-info-packet auto\n\
+set remote library-info-svr4-packet auto\n\
+set remote memory-map-packet auto\n\
+set remote memory-read-packet-size 0\n\
+set remote memory-write-packet-size 0\n\
+set remote multiprocess-feature-packet auto\n\
+set remote no-resumed-stop-reply-packet auto\n\
+set remote noack-packet auto\n\
+set remote osdata-packet auto\n\
+set remote p-packet auto\n\
+set remote pass-signals-packet auto\n\
+set remote pid-to-exec-file-packet auto\n\
+set remote program-signals-packet auto\n\
+set remote query-attached-packet auto\n\
+set remote read-aux-vector-packet auto\n\
+set remote read-btrace-conf-packet auto\n\
+set remote read-btrace-packet auto\n\
+set remote read-fdpic-loadmap-packet auto\n\
+set remote read-sdata-object-packet auto\n\
+set remote read-siginfo-object-packet auto\n\
+set remote read-spu-object-packet auto\n\
+set remote read-watchpoint-packet auto\n\
+set remote reverse-continue-packet auto\n\
+set remote reverse-step-packet auto\n\
+set remote run-packet auto\n\
+set remote search-memory-packet auto\n\
+set remote set-register-packet auto\n\
+set remote software-breakpoint-packet auto\n\
+set remote static-tracepoints-packet auto\n\
+set remote supported-packets-packet auto\n\
+set remote swbreak-feature-packet auto\n\
+set remote symbol-lookup-packet auto\n\
+set remote system-call-allowed not allowed\n\
+set remote target-features-packet auto\n\
+set remote thread-events-packet auto\n\
+set remote threads-packet auto\n\
+set remote trace-buffer-size-packet auto\n\
+set remote trace-status-packet auto\n\
+set remote traceframe-info-packet auto\n\
+set remote unwind-info-block-packet auto\n\
+set remote verbose-resume-packet auto\n\
+set remote verbose-resume-supported-packet auto\n\
+set remote vfork-event-feature-packet auto\n\
+set remote write-siginfo-object-packet auto\n\
+set remote write-spu-object-packet auto\n\
+set remote write-watchpoint-packet auto\n\
+set remoteaddresssize 0\n\
+set remotelogbase ascii\n\
+set remotetimeout 0d2\n\
+set script-extension soft\n\
+set serial baud -1\n\
+set serial parity none\n\
+set solib-absolute-prefix target:\n\
+set solib-search-path \n\
+set struct-convention default\n\
+set sysroot target:\n\
+set target-charset auto\n\
+set target-file-system-kind auto\n\
+set target-wide-charset auto\n\
+set tcp connect-timeout 0d15\n\
+set tdesc  The target description will be read from the target\n\
+set trace-buffer-size 0\n\
+set trace-notes \n\
+set trace-stop-notes \n\
+set trace-user \n\
+set tui active-border-mode bold-standout\n\
+set tui border-kind acs\n\
+set tui border-mode normal\n\
+set watchdog 0\n\
+set width 0\n
 ! Ddd*jdbSettings: 
 ! Ddd*perlSettings: 
 ! Ddd*pydbSettings: 
@@ -77,8 +354,8 @@ Ddd*themes: \
 ! smalltitles.vsl	\n\
 ! red.vsl	\n\
 ! green.vsl	\n\
-x86.vsl	$eax*;$ebx*;$ecx*;$edx*;($eflags &*\n\
 ! 	green.vsl\n\
+x86.vsl	$eax*;$ebx*;$ecx*;$edx*;($eflags &*\n\
 rednil.vsl	*\n
 
 ! Tips.
