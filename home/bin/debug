@@ -1,8 +1,4 @@
 #!/bin/sh
 
-# fix "waiting until GDB gets ready"
-# https://code.i-harness.com/en/q/2c76d3
-sed -i '/not set/d' $HOME/.ddd/init
-
 # use egdb rather than old gdb in base
 ddd --gdb --debugger /usr/local/bin/egdb $*

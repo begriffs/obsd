@@ -140,7 +140,7 @@ set dprintf-function printf\n\
 set dprintf-style gdb\n\
 set exec-direction Forward\n\
 set exec-wrapper \n\
-set extended-prompt not set\n\
+set extended-prompt (gdb) \n\
 set filename-display Filenames are displayed as \"relative\"\n\
 set follow-exec-mode same\n\
 set gnutarget auto\n\
