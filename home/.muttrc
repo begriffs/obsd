@@ -18,7 +18,7 @@ mailboxes +INBOX +friends +util \
 	+Sent +Spam +craigslist +local \
 	+github +grest +cyberia +tcmaker \
 	+bsd-misc +bsd-tech +bsd-bugs +bsd-ann +bsd-ports \
-	+radio +icu +bison +i3 +tuhs \
+	+radio +icu +bison +i3 +tuhs +gdb \
 	+mutt-dev +mutt-users \
 	+pg +pg-bugs +pg-docs +pg-www \
 	+gnupg-users +libressl +spamit +Archive \
