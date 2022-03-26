@@ -66,7 +66,7 @@ set smart_wrap
 set pager_index_lines=8
 
 ignore *
-unignore From To Reply-To CC Bcc Subject Date Organization X-Label X-Mailer User-Agent
+unignore From To Reply-To CC Bcc Subject Date Organization X-Label X-Mailer User-Agent X-Spam-Score
 
 # writing
 
