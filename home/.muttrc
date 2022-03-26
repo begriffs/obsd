@@ -78,6 +78,9 @@ set attribution='%n wrote:'
 
 set edit_headers = yes
 
+source ~/.mail_aliases
+set alias_file=~/.mail_aliases
+
 # bindings
 
 bind index,pager \Ck sidebar-prev
