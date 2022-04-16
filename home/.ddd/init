@@ -1,6 +1,17 @@
 Ddd*debuggerCommand: /usr/local/bin/egdb
 Ddd*rshCommand: ssh -t
 
+Ddd*XmText.background:             black
+Ddd*XmText.foreground:             white
+Ddd*XmTextField.background:        black
+Ddd*XmTextField.foreground:        white
+Ddd*XmList.background:             black
+Ddd*XmList.foreground:             white
+Ddd*graph_edit.background:         #333333
+Ddd*graph_edit.edgeColor:          red
+Ddd*graph_edit.nodeColor:          white
+Ddd*graph_edit.gridColor:          white
+
 set extended-prompt \n(gdb) \n\
 
 ! DO NOT ADD ANYTHING BELOW THIS LINE -- DDD WILL OVERWRITE IT
