@@ -1,5 +1,6 @@
 Ddd*debuggerCommand: /usr/local/bin/egdb
 Ddd*rshCommand: ssh -t
+Ddd*saveOptionsOnExit: off
 
 Ddd*XmText.background:             black
 Ddd*XmText.foreground:             white
