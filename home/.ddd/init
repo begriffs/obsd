@@ -374,7 +374,7 @@ Ddd*dataFontSize: 130
 ! Windows.
 Ddd*openDataWindow: off
 Ddd*openSourceWindow: on
-Ddd*openDebuggerConsole: on
+Ddd*openDebuggerConsole: off
 Ddd*Separate: off
 Ddd*separateExecWindow: off
 Ddd*groupIconify: off
@@ -385,10 +385,10 @@ Ddd*dumpCore: on
 Ddd*debugCoreDumps: off
 
 ! Window sizes.
-Ddd*graph_edit.height: 100
-Ddd*source_text_w.columns: 84
-Ddd*source_text_w.rows: 40
+Ddd*graph_edit.height: 292
+Ddd*source_text_w.columns: 73
+Ddd*source_text_w.rows: 28
 Ddd*code_text_w.columns: 1
 Ddd*code_text_w.rows: 1
-Ddd*gdb_w.columns: 84
+Ddd*gdb_w.columns: 73
 Ddd*gdb_w.rows: 5
