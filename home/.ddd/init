@@ -1,6 +1,8 @@
 Ddd*debuggerCommand: /usr/local/bin/egdb
 Ddd*rshCommand: ssh -t
 
+set extended-prompt \n(gdb) \n\
+
 ! DO NOT ADD ANYTHING BELOW THIS LINE -- DDD WILL OVERWRITE IT
 Ddd*dddinitVersion: 3.3.12
 
