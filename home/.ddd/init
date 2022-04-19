@@ -323,7 +323,7 @@ Ddd*plotTermType: xlib
 
 ! Tool Bars.
 Ddd*toolbarsAtBottom: on
-Ddd*buttonImages: off
+Ddd*buttonImages: on
 Ddd*buttonCaptions: off
 Ddd*FlatButtons: on
 Ddd*buttonColorKey: g
@@ -331,8 +331,8 @@ Ddd*activeButtonColorKey: c
 
 ! Command Tool.
 Ddd*commandToolBar: off
-! Ddd*toolRightOffset: 8
-! Ddd*toolTopOffset: 8
+Ddd*toolRightOffset: 7
+Ddd*toolTopOffset: 31
 
 ! Buttons.
 Ddd*consoleButtons: 
