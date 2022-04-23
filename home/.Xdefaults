@@ -44,6 +44,7 @@ Xterm*savelines: 16384
 XTerm*ScrollBar: false
 XTerm*scrollTtyOutput: false
 
+xterm*allowMouseOps: true
 XTerm*vt100.on2Clicks: word
 XTerm*vt100.on3Clicks:regex [^[:space:],()<>'"|]+
 XTerm*vt100.on4Clicks:line
