@@ -314,7 +314,7 @@ Ddd*valueDocs: on
 ! Ddd*editCommand: ${XEDITOR-false} +@LINE@ @FILE@ || xterm -e ${EDITOR-vi} +@LINE@ @FILE@
 ! Ddd*getCoreCommand: 
 ! Ddd*psCommand: ps x 2> /dev/null || ps -ef 2> /dev/null || ps
-! Ddd*termCommand: xterm -bg \'grey96\' -fg \'black\' -cr \'DarkGreen\' -fn \'@FONT@\' -title \'DDD: Execution Window\' -e /bin/sh -c
+Ddd*termCommand: xterm -bg \'black\' -fg \'white\' -cr \'red\' -fn \'@FONT@\' -title \'DDD: Execution Window\' -e /bin/sh -c
 ! Ddd*uncompressCommand: gzip -d -c
 ! Ddd*wwwCommand: firefox -remote \'openURL(@URL@)\' || mozilla -remote \'openURL(@URL@)\' || opera -remote \'openURL(@URL@)\' || ${WWWBROWSER-false} \'@URL@\' || konqueror \'openURL(@URL@)\' || galeon \'openURL(@URL@)\' || skipstone \'openURL(@URL@)\' || light \'openURL(@URL@)\' || netscape -remote \'openURL(@URL@)\' || mozilla \'@URL@\' || kfmbrowser \'@URL@\' || netscape \'@URL@\' || gnudoit \'(w3-fetch \"@URL@\")\' || mosaic \'@URL@\' || Mosaic \'@URL@\' || xterm -e lynx \'@URL@\'
 ! Ddd*plotCommand: gnuplot -bg \'grey96\' -font \'@FONT@\' -name \'@NAME@\' -geometry +5000+5000
@@ -376,7 +376,7 @@ Ddd*openDataWindow: off
 Ddd*openSourceWindow: on
 Ddd*openDebuggerConsole: off
 Ddd*Separate: off
-Ddd*separateExecWindow: off
+Ddd*separateExecWindow: on
 Ddd*groupIconify: off
 Ddd*uniconifyWhenReady: on
 
