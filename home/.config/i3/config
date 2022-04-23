@@ -1,5 +1,4 @@
-# the Happy Hacking Keyboard button next to space
-set $mod Mod4
+set $mod Mod1
 
 # by default i3 uses vim keys shifted to the left [j-;]
 set $up k
