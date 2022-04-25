@@ -7,11 +7,10 @@ set history size 10000
 set history save on
 
 # log a lot
-set verbose on
-set trace-commands on
 set logging file ~/.gdb/log
 set logging overwrite on
 set logging on
+set verbose on
 
 # user scripting
 source /home/myuser/.gdb/py-modules/add-syspath.py
