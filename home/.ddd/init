@@ -38,8 +38,6 @@ set breakpoint auto-hw on\n\
 set circular-trace-buffer off\n\
 set code-cache on\n\
 set coerce-float-to-double on\n\
-set confirm off\n\
-set debug auto-load off\n\
 set debug check-physname off\n\
 set debug compile off\n\
 set debug displaced off\n\
@@ -55,8 +53,6 @@ set disconnected-tracing off\n\
 set editing on\n\
 set exec-done-display off\n\
 set history expansion off\n\
-set history save off\n\
-set logging overwrite off\n\
 set logging redirect off\n\
 set may-insert-breakpoints on\n\
 set may-insert-fast-tracepoints on\n\
@@ -102,7 +98,6 @@ set trace-commands off\n\
 set trust-readonly-sections off\n\
 set unwind-on-terminating-exception on\n\
 set unwindonsignal off\n\
-set verbose off\n\
 set write off\n\
 set can-use-hw-watchpoints 1\n\
 set debug arch 0\n\
@@ -132,8 +127,6 @@ set follow-fork-mode parent\n\
 set check range auto\n\
 set check type on\n\
 set annotate 1\n\
-set auto-load safe-path /usr/local/share/gdb/auto-load\n\
-set auto-load scripts-directory /usr/local/share/gdb/auto-load\n\
 set backtrace limit 0\n\
 set breakpoint condition-evaluation auto (currently host)\n\
 set breakpoint pending auto\n\
@@ -163,15 +156,12 @@ set follow-exec-mode same\n\
 set gnutarget auto\n\
 set guile print-stack message\n\
 set height 0\n\
-set history filename /home/j/dev/semln/.gdb_history\n\
 set history remove-duplicates 0\n\
-set history size 0d256\n\
 set host-charset auto\n\
 set inferior-tty \n\
 set input-radix 0d10\n\
 set interactive-mode auto\n\
 set listsize 0d10\n\
-set logging file gdb.txt\n\
 set max-completions 0d200\n\
 set max-user-call-depth 0d1024\n\
 set max-value-size 65536\n\
