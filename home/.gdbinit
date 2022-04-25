@@ -30,9 +30,10 @@ define ktrace
 		finish
 	end
 end
+
 define ktrace_stop
-		set $pid=getpid()
-		eval "set $ktraceout=\"/tmp/ktrace.%d.out\"", $pid
-		eval "shell ktrace -c -f %s", $ktraceout
-		printf "ktrace stopped for %s\n", $ktraceout
+	set $pid=getpid()
+	eval "set $ktraceout=\"/tmp/ktrace.%d.out\"", $pid
+	eval "shell ktrace -c -f %s", $ktraceout
+	printf "ktrace stopped for %s\n", $ktraceout
 end
