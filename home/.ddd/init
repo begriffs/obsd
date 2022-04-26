@@ -13,6 +13,12 @@ Ddd*graph_edit.edgeColor:          red
 Ddd*graph_edit.nodeColor:          white
 Ddd*graph_edit.gridColor:          white
 
+
+Ddd*renderTable: rt
+Ddd*rt*fontType: FONT_IS_XFT
+Ddd*rt*fontName: Helvetica
+Ddd*rt*fontSize: 8
+
 set extended-prompt \n(gdb) \n\
 
 ! DO NOT ADD ANYTHING BELOW THIS LINE -- DDD WILL OVERWRITE IT
@@ -304,7 +310,7 @@ Ddd*valueDocs: on
 ! Ddd*editCommand: ${XEDITOR-false} +@LINE@ @FILE@ || xterm -e ${EDITOR-vi} +@LINE@ @FILE@
 ! Ddd*getCoreCommand: 
 ! Ddd*psCommand: ps x 2> /dev/null || ps -ef 2> /dev/null || ps
-Ddd*termCommand: xterm -bg \'black\' -fg \'white\' -cr \'red\' -fn \'@FONT@\' -title \'DDD: Execution Window\' -e /bin/sh -c
+Ddd*termCommand: xterm -u8 -cr \'red\' -title \'DDD: Execution Window\' -e /bin/sh -c
 ! Ddd*uncompressCommand: gzip -d -c
 ! Ddd*wwwCommand: firefox -remote \'openURL(@URL@)\' || mozilla -remote \'openURL(@URL@)\' || opera -remote \'openURL(@URL@)\' || ${WWWBROWSER-false} \'@URL@\' || konqueror \'openURL(@URL@)\' || galeon \'openURL(@URL@)\' || skipstone \'openURL(@URL@)\' || light \'openURL(@URL@)\' || netscape -remote \'openURL(@URL@)\' || mozilla \'@URL@\' || kfmbrowser \'@URL@\' || netscape \'@URL@\' || gnudoit \'(w3-fetch \"@URL@\")\' || mosaic \'@URL@\' || Mosaic \'@URL@\' || xterm -e lynx \'@URL@\'
 ! Ddd*plotCommand: gnuplot -bg \'grey96\' -font \'@FONT@\' -name \'@NAME@\' -geometry +5000+5000
@@ -352,14 +358,15 @@ Ddd*makeDisplayShortcuts:
 ! Ddd*xdbDisplayShortcuts: 
 
 ! Fonts.
-Ddd*defaultFont: terminal-medium
-! Ddd*variableWidthFont: helvetica-medium
-Ddd*fixedWidthFont: terminal-medium
-Ddd*dataFont: terminal-medium
-Ddd*defaultFontSize: 130
-Ddd*variableWidthFontSize: 120
-Ddd*fixedWidthFontSize: 130
-Ddd*dataFontSize: 130
+
+! Ddd*defaultFont: helvetica
+! Ddd*variableWidthFont: helvetica
+! Ddd*fixedWidthFont: lucidatypewriter-medium
+! Ddd*dataFont: lucidatypewriter-medium
+! Ddd*defaultFontSize: 120
+! Ddd*variableWidthFontSize: 120
+! Ddd*fixedWidthFontSize: 130
+! Ddd*dataFontSize: 130
 
 ! Windows.
 Ddd*openDataWindow: off
