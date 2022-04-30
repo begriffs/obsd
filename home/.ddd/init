@@ -16,7 +16,7 @@ Ddd*graph_edit.gridColor:          white
 
 Ddd*renderTable: rt
 Ddd*rt*fontType: FONT_IS_XFT
-Ddd*rt*fontName: Helvetica
+Ddd*rt*fontName: Inconsolata
 Ddd*rt*fontSize: 8
 
 set extended-prompt \n(gdb) \n\
@@ -362,11 +362,11 @@ Ddd*makeDisplayShortcuts:
 ! Ddd*defaultFont: helvetica
 ! Ddd*variableWidthFont: helvetica
 ! Ddd*fixedWidthFont: lucidatypewriter-medium
-! Ddd*dataFont: lucidatypewriter-medium
+Ddd*dataFont: helvetica
 ! Ddd*defaultFontSize: 120
 ! Ddd*variableWidthFontSize: 120
 ! Ddd*fixedWidthFontSize: 130
-! Ddd*dataFontSize: 130
+Ddd*dataFontSize: 130
 
 ! Windows.
 Ddd*openDataWindow: off
