@@ -1,4 +1,4 @@
-set $mod Mod1
+set $alt Mod1
 
 # by default i3 uses vim keys shifted to the left [j-;]
 set $up k
@@ -8,41 +8,38 @@ set $right l
 
 font -*-clean-*-*-*-*-15-*-*-*-*-*-*-*
 
-bindsym $mod+$left  focus left
-bindsym $mod+$down  focus down
-bindsym $mod+$up    focus up
-bindsym $mod+$right focus right
+bindsym Control+$alt+$left  focus left
+bindsym Control+$alt+$down  focus down
+bindsym Control+$alt+$up    focus up
+bindsym Control+$alt+$right focus right
 
 bindcode 174 focus left
 bindcode 176 focus right
 bindcode 160 focus up
 
-bindsym $mod+Shift+$left  move left
-bindsym $mod+Shift+$down  move down
-bindsym $mod+Shift+$up    move up
-bindsym $mod+Shift+$right move right
+bindsym Control+$alt+Shift+$left  move left
+bindsym Control+$alt+Shift+$down  move down
+bindsym Control+$alt+Shift+$up    move up
+bindsym Control+$alt+Shift+$right move right
 
-bindsym $mod+Return   exec /usr/X11R6/bin/xterm
-bindsym $mod+space    exec /usr/local/bin/dmenu_run
-bindsym $mod+Shift+q  kill
+bindsym $alt+Return   exec /usr/X11R6/bin/xterm
+bindsym $alt+space    exec /usr/local/bin/dmenu_run
+bindsym $alt+Shift+q  kill
 
-bindsym $mod+backslash split h
-bindsym $mod+minus     split v
+bindsym $alt+backslash split h
+bindsym $alt+minus     split v
 
-bindsym $mod+Shift+Return fullscreen toggle
-bindsym $mod+Shift+space  floating toggle
+bindsym $alt+Shift+Return fullscreen toggle
+bindsym $alt+Shift+space  floating toggle
 
-floating_modifier $mod
+floating_modifier $alt
 
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# change focus between tiling / floating windows
-bindsym $mod+Tab focus mode_toggle
+bindsym Control+$alt+s layout stacking
+bindsym Control+$alt+w layout tabbed
+bindsym Control+$alt+e layout toggle split
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym Control+$alt+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -58,37 +55,40 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $alt+Tab workspace next
+bindsym $alt+Shift+Tab workspace prev
+
+bindsym Control+1 workspace $ws1
+bindsym Control+2 workspace $ws2
+bindsym Control+3 workspace $ws3
+bindsym Control+4 workspace $ws4
+bindsym Control+5 workspace $ws5
+bindsym Control+6 workspace $ws6
+bindsym Control+7 workspace $ws7
+bindsym Control+8 workspace $ws8
+bindsym Control+9 workspace $ws9
+bindsym Control+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym Control+Shift+1 move container to workspace $ws1
+bindsym Control+Shift+2 move container to workspace $ws2
+bindsym Control+Shift+3 move container to workspace $ws3
+bindsym Control+Shift+4 move container to workspace $ws4
+bindsym Control+Shift+5 move container to workspace $ws5
+bindsym Control+Shift+6 move container to workspace $ws6
+bindsym Control+Shift+7 move container to workspace $ws7
+bindsym Control+Shift+8 move container to workspace $ws8
+bindsym Control+Shift+9 move container to workspace $ws9
+bindsym Control+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $alt+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $alt+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $alt+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+r mode "resize"
+bindsym $alt+Shift+r mode "resize"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -97,10 +97,10 @@ mode "resize" {
         bindsym $down resize shrink height 15 px or 15 ppt
         bindsym $right resize grow width 15 px or 15 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+        # back to normal: Enter or Escape or $alt+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $alt+r mode "default"
 }
 
 bar {
