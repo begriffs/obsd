@@ -10,15 +10,45 @@ set history save on
 set logging file ~/.gdb/log
 set logging overwrite on
 set logging on
-set verbose on
+
+# can scroll back in my terminal, and pagination
+# is annoyting when setting mass breakpoints
+set pagination off
 
 # user scripting
 source /home/myuser/.gdb/py-modules/add-syspath.py
 add-auto-load-safe-path /home/myuser/.gdb
 add-auto-load-scripts-directory /home/myuser/.gdb/auto-load
 
-# syslog tracing
+source /home/myuser/.gdb/py-modules/stack.py
+
+# trace function calls
+
+define ftrace
+	dont-repeat
+
+	set $first_new = 1 + ($bpnum ? $bpnum : 0)
+
+	if $argc < 1
+		# by default, trace all functions except those that start with
+		# underscore, since they are weird system things
+		rbreak ^[a-zA-Z]
+	else
+		rbreak $arg0
+	end
+	commands
+		silent
+		python print(indented_name(gdb.newest_frame()))
+		cont
+	end
+
+	printf "\nTracing enabled. To disable, run:\n\tdel %d-%d\n", $first_new, $bpnum
+end
+
+# trace system calls
+
 define ktrace
+	dont-repeat
 	break $arg0
 	commands
 		silent
