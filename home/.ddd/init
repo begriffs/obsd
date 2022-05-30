@@ -156,7 +156,7 @@ set dprintf-function printf\n\
 set dprintf-style gdb\n\
 set exec-direction forward\n\
 set exec-wrapper \n\
-set extended-prompt (gdb) \n\
+unset extended-prompt\n\
 set filename-display relative\n\
 set follow-exec-mode same\n\
 set gnutarget auto\n\
