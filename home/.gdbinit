@@ -20,7 +20,7 @@ source /home/myuser/.gdb/py-modules/add-syspath.py
 add-auto-load-safe-path /home/myuser/.gdb
 add-auto-load-scripts-directory /home/myuser/.gdb/auto-load
 
-source /home/myuser/.gdb/py-modules/stack.py
+source /home/j/.gdb/py-modules/frame.py
 
 # trace function calls
 
@@ -38,11 +38,17 @@ define ftrace
 	end
 	commands
 		silent
-		python print(indented_name(gdb.newest_frame()))
+		python print(frame_indented_name(gdb.newest_frame()))
 		cont
 	end
 
 	printf "\nTracing enabled. To disable, run:\n\tdel %d-%d\n", $first_new, $bpnum
+end
+
+define pstack
+	dont-repeat
+
+	python print(frame_path(gdb.newest_frame()))
 end
 
 # trace system calls
@@ -66,4 +72,18 @@ define ktrace_stop
 	eval "set $ktraceout=\"/tmp/ktrace.%d.out\"", $pid
 	eval "shell ktrace -c -f %s", $ktraceout
 	printf "ktrace stopped for %s\n", $ktraceout
+end
+
+define hook-stop
+	if $display_locals_flag
+		info locals
+	end
+end
+
+define display_locals
+	set $display_locals_flag = 1
+end
+
+define undisplay_locals
+	set $display_locals_flag = 0
 end
