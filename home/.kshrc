@@ -15,6 +15,11 @@ alias g="git"
 alias pman="man -M $HOME/posix-man/issue7"
 alias pman6="man -M $HOME/posix-man/issue6"
 
+alias bt="egdb --batch -ex 'set print addr off' -ex 'set print pretty on' -ex 'set print frame-arguments all' -ex 'thread apply all bt full'"
+alias armddd="ddd --gdb --debugger \"arm-none-eabi-gdb -x ~/.gdb/arch/cm3.init\""
+
+alias rddd="ddd --debugger gdb --no-exec-window --host"
+
 alias wifi="doas /sbin/ifconfig iwn0"
 
 ssh-add -l >/dev/null 2>&1

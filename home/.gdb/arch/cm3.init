@@ -1,0 +1,20 @@
+tar ext :3333
+set remote hardware-breakpoint-limit 6
+set remote hardware-watchpoint-limit 4
+monitor reset halt
+load
+
+# https://interrupt.memfault.com/blog/cortex-m-fault-debug
+define cm3err
+	printf "UsageFault Status Register (UFSR)\t"
+	x/2bt 0xE000ED2A
+
+	printf "BusFault Status Register   (BFSR)\t"
+	x/bt 0xE000ED29
+
+	printf "MemManage Status Register (MMFSR)\t"
+	x/bt 0xE000ED28
+
+	printf "HardFault Status Register  (HFSR)\t"
+	x/bw 0xE000ED2C
+end
