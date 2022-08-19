@@ -1,0 +1,7 @@
+lp|brother:\
+	:sh=:\
+	:rm=<printer_ip_addr>:\
+	:sd=/var/spool/output/lpd:\
+	:lf=/var/log/lpd-errs:\
+	:rp=brother
+
