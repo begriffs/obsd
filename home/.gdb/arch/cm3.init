@@ -1,8 +1,8 @@
+directory /usr/local/libopencm3-1.0.0/lib/stm32/f4
 tar ext :3333
 set remote hardware-breakpoint-limit 6
 set remote hardware-watchpoint-limit 4
 monitor reset halt
-load
 
 # https://interrupt.memfault.com/blog/cortex-m-fault-debug
 define cm3err
