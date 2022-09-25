@@ -1,0 +1,4 @@
+#!/bin/sh
+
+speed=${1-38400}
+cu -s $speed -l cuaU1
