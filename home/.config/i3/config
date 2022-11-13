@@ -30,6 +30,9 @@ bindsym Control+$alt+x exec /usr/X11R6/bin/xlock
 bindsym Control+Shift+o exec "$HOME/bin/open-selection-chrome.sh"
 bindsym Control+Shift+e exec "$HOME/bin/open-selection-vim.sh"
 
+bindsym Control+F5 exec /usr/local/bin/maim ~/scrot/$(date +%s).png
+bindsym Control+F6 exec /usr/local/bin/maim -i $(xdotool getactivewindow) ~/scrot/$(date +%s).png
+
 bindsym $alt+backslash split h
 bindsym $alt+minus     split v
 
