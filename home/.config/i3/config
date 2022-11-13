@@ -25,6 +25,7 @@ bindsym Control+$alt+Shift+$right move right
 bindsym $alt+Return   exec /usr/X11R6/bin/xterm
 bindsym $alt+space    exec /usr/local/bin/dmenu_run
 bindsym $alt+Shift+q  kill
+bindsym Control+$alt+x exec /usr/X11R6/bin/xlock
 
 bindsym Control+Shift+o exec "$HOME/bin/open-selection-chrome.sh"
 bindsym Control+Shift+e exec "$HOME/bin/open-selection-vim.sh"
